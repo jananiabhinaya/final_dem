@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+function myfunc() 
+{
+var name=document.getElementById("test1").value;
+var name1=document.getElementById("test2").value;
+  var gen = document.getElementsByName("gender");
+  var gen1;
+  for(var i = 0; i < gen.length; i++)
+  {
+    if(gen[i].checked)
+    {
+        gen1 = gen[i].value;
+        
+    }
+  }
+  
+  var veh = document.getElementsByName('vehicle');
+  var veh1;
+
+for(var i = 0; i < veh.length; i++)
+{
+    if(veh[i].checked)
+    {
+        veh1 = veh[i].value;
+        
+    }
+}
+
+if(name==name1)
+{
+  document.write("Welcome   "+name); 
+  document.write("<br>");
+  document.write("Gender   "+gen1+ "\n");
+  document.write("<br>");  
+  document.write("Vehicle   "+veh1+ "\n");  
+}
+ }
+</script>
+<form>
+
+<input type="text" id="test1" maxlength="5" minlength="3"><br><br>
+<input type="password" id="test2"><br>
+
+<input type="radio" id="g1" name="gender" value="male"> Male<br>
+<input type="radio" id="g2" name="gender" value="female"> Female<br>
+<input type="radio" id="g3" name="gender" value="other"> Other<br>
+
+<input type="checkbox" id="c1" name="vehicle" value="Bike"> I have a bike <br>
+<input type="checkbox" id="c2" name="vehicle" value="Car"> I have a car 
+
+<input type="button" onclick="myfunc()" value="CLICK"><br>
+
+</body>
+</form>
+
+</html> 
